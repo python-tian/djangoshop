@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="identifier.sqlite" uuid="453e0e65-1774-4132-97a3-9a42870e404c">
+    <data-source name="identifier.sqlite" uuid="95633e2e-40bd-46c9-b1d5-76ab1ecc6be9">
       <database-info product="SQLite" version="3.25.1" jdbc-version="2.1" driver-name="SQLite JDBC" driver-version="3.25.1" dbms="SQLITE" exact-version="3.25.1" exact-driver-version="3.25">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
@@ -10,7 +10,7 @@
       <auth-required>false</auth-required>
       <introspection-schemas>*:@</introspection-schemas>
     </data-source>
-    <data-source name="db" uuid="98674628-1e13-46cc-b444-29eb1932f7a5">
+    <data-source name="db" uuid="e7fd3284-6867-4fe1-9e1b-5637c62856fe">
       <database-info product="SQLite" version="3.25.1" jdbc-version="2.1" driver-name="SQLite JDBC" driver-version="3.25.1" dbms="SQLITE" exact-version="3.25.1" exact-driver-version="3.25">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>

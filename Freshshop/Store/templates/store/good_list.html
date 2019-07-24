@@ -1,0 +1,50 @@
+{% extends 'store/blank.html' %}
+{% block title %}
+    商品展示
+{% endblock %}
+{% block blank %}
+     <a class="btn btn-danger" href="/store/add_good/">商品添加</a>
+   <form method="post">
+   {% csrf_token %}
+    <table class="table table-bordered" >
+        <thead>
+            <th>商品名称</th>
+            <th>商品价格</th>
+            <th>商品数量</th>
+            <th>出厂日期/年/月/日</th>
+            <th>保质期/天</th>
+            <th>操作</th>
+        </thead>
+        <tbody>
+            {% for t in page %}
+
+                <tr>
+                    <td><a href="/store/goods/?id={{ t.id }}">{{ t.goods_name }}</a></td>
+                    <td><input type="text" value="{{ t.goods_price}}" id="gp" name="goods_price">
+                        <input type="hidden"  id="goods_id" name="goods_id" value="{{ t.id }}">
+                    </td>
+                     <td>{{ t.goods_number }}</td>
+                    <td>{{ t.goods_date|date:'Y-m-d'}}</td>
+                    <td>{{ t.goods_safedate }}</td>
+                    <td><a class="btn btn-danger">下架</a>
+                         <a class="btn btn-primary">销毁</a>
+
+                    </td>
+                </tr>
+            {% endfor %}
+        <span id="ts">{{ result.content }}</span>
+        </tbody>
+    </table>
+    <div class="dataTables_paginate paging_simple_numbers">
+        <ul class="pagination">
+            {% for p in page_range %}
+            <li class="paginate_button page-item">
+                <a class="page-link" href="?keywords={{ keywords }}&page_num={{ p }}">{{ p }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+     </form>
+{% endblock %}
+{% block script %}
+{% endblock %}

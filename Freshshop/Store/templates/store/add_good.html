@@ -1,0 +1,44 @@
+{% extends 'store/blank.html' %}
+{% block title %}
+    商品添加
+{% endblock %}
+
+{% block blank %}
+    <form style="text-align: center" enctype="multipart/form-data" method="post">
+    <th>商品添加</th>
+         <div class="form-group">
+                  {% csrf_token %}
+         </div>
+         <div class="form-group">
+                    <input type="text" class="form-control form-control-user" name="goods_name" placeholder="商品名称" id="username">
+         </div>
+         <div class="form-group">
+                    <input type="text" class="form-control form-control-user" name="goods_description" placeholder="商品描述" id="username">
+         </div>
+         <div class="form-group">
+                    <input type="text" class="form-control form-control-user" name="goods_price" placeholder="商品价格" id="username">
+         </div>
+         <div class="form-group">
+                    <input type="text" class="form-control form-control-user" name="goods_number" placeholder="商品数量" >
+         </div>
+         <div class="form-group">
+                    <input type="file" class="form-control form-control-user" name="goods_image" placeholder="商品图片" id="username">
+         </div>
+         <div class="form-group">
+                    <input type="text" class="form-control form-control-user" name="goods_date" placeholder="出厂日期" id="username">
+         </div>
+         <div class="form-group">
+                    <input type="text" class="form-control form-control-user" name="goods_safedate" placeholder="保质期" id="username">
+         </div>
+
+         <div class="form-group">
+                    <input type="hidden" class="form-control form-control-user" name="store_id" placeholder="店铺id" id="user_id" value="1">
+         </div>
+
+
+          <div class="form-group">
+                    <input class="btn btn-primary btn-user btn-block" type="submit" value="保存" >
+         </div>
+    </form>
+
+{% endblock %}

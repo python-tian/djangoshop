@@ -2,45 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b11b5cb2-de75-438f-82bd-b7e1dfe8e622" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Store/templates/store/blank.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Store/templates/store/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Store/templates/store/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Store/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Store/templates/store/add_good.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Store/templates/store/good_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Store/templates/store/goods.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Store/templates/store/goods_update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Store/templates/store/register_store.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/store/images/06.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/store/images/10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/store/images/12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/store/images/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/store/images/8.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/453e0e65-1774-4132-97a3-9a42870e404c.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/453e0e65-1774-4132-97a3-9a42870e404c/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/98674628-1e13-46cc-b444-29eb1932f7a5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/98674628-1e13-46cc-b444-29eb1932f7a5/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Freshshop/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Freshshop/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Freshshop/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Freshshop/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Store/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/Store/migrations/0001_initial.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Store/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Store/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Store/static/store/404.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Store/static/store/blank.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Store/static/store/buttons.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Store/static/store/cards.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Store/static/store/charts.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Store/static/store/css/sb-admin-2.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Store/static/store/css/sb-admin-2.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Store/static/store/forgot-password.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Store/static/store/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Store/static/store/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Store/static/store/register.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Store/static/store/tables.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Store/static/store/utilities-animation.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Store/static/store/utilities-border.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Store/static/store/utilities-color.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Store/static/store/utilities-other.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Store/templates/store/blank.html" beforeDir="false" afterPath="$PROJECT_DIR$/Store/templates/store/blank.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Store/templates/store/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Store/templates/store/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Store/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Store/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Store/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Store/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/store/404.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/store/blank.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/store/buttons.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/store/cards.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/store/charts.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/static/store/css/sb-admin-2.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/store/css/sb-admin-2.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/store/forgot-password.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/store/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/store/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/store/register.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/store/tables.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/store/utilities-animation.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/store/utilities-border.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/store/utilities-color.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/store/utilities-other.html" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -82,12 +71,42 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Freshshop/settings.py">
+        <entry file="file://$PROJECT_DIR$/Store/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="121" selection-start-line="121" selection-end-line="121" />
+            <state relative-caret-position="-166">
+              <caret line="34" column="15" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Store/templates/store/blank.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="141">
+              <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Store/templates/store/goods.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="49" lean-forward="true" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
+              <folding>
+                <element signature="e#190#225#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Store/templates/store/good_list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="111">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
             </state>
           </provider>
         </entry>
@@ -95,8 +114,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Store/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="8" column="26" lean-forward="true" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+            <state relative-caret-position="123">
+              <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -105,14 +124,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Store/templates/store/register.html">
+        <entry file="file://$PROJECT_DIR$/Freshshop/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1410">
-              <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="147">
+              <caret line="124" column="1" lean-forward="true" selection-start-line="124" selection-start-column="1" selection-end-line="124" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -120,31 +135,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Store/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="89" column="19" lean-forward="true" selection-start-line="89" selection-start-column="19" selection-end-line="89" selection-end-column="19" />
+            <state relative-caret-position="30">
+              <caret line="218" selection-start-line="218" selection-end-line="218" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Store/templates/store/blank.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="335" selection-start-line="335" selection-end-line="335" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Store/templates/store/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="256" column="16" selection-start-line="256" selection-start-column="16" selection-end-line="256" selection-end-column="16" />
-              <folding>
-                <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
               </folding>
             </state>
           </provider>
@@ -156,6 +150,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -167,10 +162,11 @@
       <find>bg-login-image</find>
       <find>Illustrations</find>
       <find>Val</find>
-      <find>搜索</find>
       <find>search</find>
       <find>VAL</find>
       <find>mya</find>
+      <find>{{</find>
+      <find>搜索</find>
     </findStrings>
     <replaceStrings>
       <replace>static/store/js/</replace>
@@ -187,26 +183,32 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/../README.md" />
-        <option value="$PROJECT_DIR$/Freshshop/settings.py" />
-        <option value="$PROJECT_DIR$/Store/models.py" />
-        <option value="$PROJECT_DIR$/Freshshop/urls.py" />
         <option value="$PROJECT_DIR$/static/store/register.html" />
         <option value="$PROJECT_DIR$/Store/templates/store/register.html" />
         <option value="$PROJECT_DIR$/Store/templates/store/login.html" />
         <option value="$PROJECT_DIR$/static/store/css/sb-admin-2.min.css" />
         <option value="$PROJECT_DIR$/Store/static/store/css/sb-admin-2.min.css" />
-        <option value="$PROJECT_DIR$/Store/urls.py" />
-        <option value="$PROJECT_DIR$/Store/views.py" />
         <option value="C:/Program Files/feiq/Recv Files/Django项目/7-22Django第十一天/startbootstrap-sb-admin-2-gh-pages/blank.html" />
         <option value="C:/Program Files/feiq/Recv Files/Django项目/7-22Django第十一天/startbootstrap-sb-admin-2-gh-pages/index.html" />
-        <option value="$PROJECT_DIR$/Store/templates/store/blank.html" />
         <option value="$PROJECT_DIR$/Store/templates/store/index.html" />
+        <option value="$PROJECT_DIR$/Store/models.py" />
+        <option value="$PROJECT_DIR$/Store/templates/store/add_good.html" />
+        <option value="$PROJECT_DIR$/Store/templates/store/register_store.html" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
+        <option value="$PROJECT_DIR$/Freshshop/urls.py" />
+        <option value="$PROJECT_DIR$/Store/templates/store/goods_update.html" />
+        <option value="$PROJECT_DIR$/Store/templates/store/goods.html" />
+        <option value="$PROJECT_DIR$/Freshshop/settings.py" />
+        <option value="$PROJECT_DIR$/Store/views.py" />
+        <option value="$PROJECT_DIR$/Store/templates/store/good_list.html" />
+        <option value="$PROJECT_DIR$/Store/urls.py" />
+        <option value="$PROJECT_DIR$/Store/templates/store/blank.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-308" />
-    <option name="y" value="13" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="305" />
+    <option name="y" value="63" />
     <option name="width" value="778" />
     <option name="height" value="728" />
   </component>
@@ -231,7 +233,44 @@
             <path>
               <item name="Freshshop" type="b2602c69:ProjectViewProjectNode" />
               <item name="Freshshop" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Freshshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Freshshop" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="store" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Freshshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Freshshop" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="store" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Freshshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Freshshop" type="462c0819:PsiDirectoryNode" />
               <item name="Store" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Freshshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Freshshop" type="462c0819:PsiDirectoryNode" />
+              <item name="Store" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Freshshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Freshshop" type="462c0819:PsiDirectoryNode" />
+              <item name="Store" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Freshshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Freshshop" type="462c0819:PsiDirectoryNode" />
+              <item name="Store" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="store" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Freshshop" type="b2602c69:ProjectViewProjectNode" />
@@ -255,18 +294,24 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="sqlite" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="database.console.LAST_STATE" value="true" />
-    <property name="last_opened_file_path" value="D:/DjangoProject1/Blogb" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="last_opened_file_path" value="D:/DjangoProject/Blog6" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Shopdjangoproject\djangoshop\Freshshop\static\store\images" />
+      <recent name="D:\Shopdjangoproject\djangoshop\Freshshop\Store\static\store" />
+      <recent name="D:\Shopdjangoproject\djangoshop\Freshshop\static\store" />
+      <recent name="D:\Shopdjangoproject\djangoshop\Freshshop\Store\static\store\images" />
       <recent name="D:\Shopdjangoproject\djangoshop\Freshshop\Store\templates\store" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Shopdjangoproject\djangoshop\Freshshop\Store\static\store" />
       <recent name="D:\Shopdjangoproject\djangoshop\Freshshop\Store\templates\store" />
     </key>
   </component>
@@ -318,41 +363,70 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1563762418077</updated>
-      <workItem from="1563762421247" duration="28201000" />
+      <workItem from="1563762421247" duration="31449000" />
+      <workItem from="1563847422117" duration="14941000" />
+      <workItem from="1563869647196" duration="23314000" />
+      <workItem from="1563929473126" duration="8841000" />
+      <workItem from="1563947557728" duration="11951000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28201000" />
+    <option name="totallyTimeSpent" value="90496000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22239032" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23600605" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Database Console" weight="0.3289689" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="manage.py@Freshshop" weight="0.5220949" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.12438625" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.049099836" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.37806875" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Console" order="7" weight="0.58101475" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="bottom" id="manage.py@Freshshop" order="13" weight="0.7774141" />
+      <window_info anchor="bottom" id="Python Console" order="14" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32980332" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22844176" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.24222586" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="SciView" />
-      <window_info anchor="right" id="Database" weight="0.32980332" />
+      <window_info anchor="bottom" id="Database Console" order="7" weight="0.58101475" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="bottom" id="manage.py@Freshshop" order="13" weight="0.42716858" />
+      <window_info anchor="bottom" id="Python Console" order="14" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32980332" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -371,27 +445,7 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/453e0e65-1774-4132-97a3-9a42870e404c/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="das://98674628-1e13-46cc-b444-29eb1932f7a5/schema/main/table/Store_goods">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Store/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="18" column="66" lean-forward="true" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/store/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/static/store/register.html" />
     <entry file="file://$PROJECT_DIR$/Store/static/store/css/sb-admin-2.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-23490" />
@@ -404,23 +458,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Freshshop/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="121" selection-start-line="121" selection-end-line="121" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Freshshop/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="e#633#665#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Anaconda3/envs/DjangoPath/Lib/site-packages/django/urls/conf.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -428,27 +465,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Store/templates/store/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1410">
-          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/store/img/undraw_posting_photo.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="das://98674628-1e13-46cc-b444-29eb1932f7a5/schema/main/table/Store_seller">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://98674628-1e13-46cc-b444-29eb1932f7a5/schema/main/table/Store_seller" />
     <entry file="file://$PROJECT_DIR$/static/store/css/sb-admin-2.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
@@ -479,27 +499,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Store/templates/store/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-443">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Store/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="8" column="26" lean-forward="true" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/aria.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="151">
@@ -507,27 +506,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Program Files/feiq/Recv Files/Django项目/7-22Django第十一天/startbootstrap-sb-admin-2-gh-pages/blank.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="388" lean-forward="true" selection-end-line="395" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/common.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="881">
           <caret line="127" column="18" selection-start-line="127" selection-start-column="18" selection-end-line="127" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Store/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="89" column="19" lean-forward="true" selection-start-line="89" selection-start-column="19" selection-end-line="89" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -548,20 +530,164 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Store/templates/store/blank.html">
+    <entry file="file://C:/Program Files/feiq/Recv Files/Django项目/7-22Django第十一天/startbootstrap-sb-admin-2-gh-pages/blank.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="335" selection-start-line="335" selection-end-line="335" />
+        <state relative-caret-position="240">
+          <caret line="11" column="33" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="35" />
         </state>
       </provider>
     </entry>
+    <entry file="das://98674628-1e13-46cc-b444-29eb1932f7a5/schema/main/table/Store_storetype" />
     <entry file="file://$PROJECT_DIR$/Store/templates/store/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="256" column="16" selection-start-line="256" selection-start-column="16" selection-end-line="256" selection-end-column="16" />
+        <state relative-caret-position="-1896">
+          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Store/templates/store/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1350">
+          <caret line="45" column="22" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://98674628-1e13-46cc-b444-29eb1932f7a5/schema/main/table/Store_goods" />
+    <entry file="das://98674628-1e13-46cc-b444-29eb1932f7a5/schema/main/table/Store_store" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/95633e2e-40bd-46c9-b1d5-76ab1ecc6be9/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="das://e7fd3284-6867-4fe1-9e1b-5637c62856fe/schema/main/table/Store_seller">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e7fd3284-6867-4fe1-9e1b-5637c62856fe/schema/main/table/Store_storetype">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Store/templates/store/add_good.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Store/templates/store/register_store.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e7fd3284-6867-4fe1-9e1b-5637c62856fe/schema/main/table/Store_store">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Freshshop/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
           <folding>
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" />
+            <element signature="e#633#665#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Store/templates/store/goods_update.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-953">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/store/images/06.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="das://e7fd3284-6867-4fe1-9e1b-5637c62856fe/schema/main/table/Store_goods_store_id">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e7fd3284-6867-4fe1-9e1b-5637c62856fe/schema/main/table/Store_goods">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Store/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-166">
+          <caret line="34" column="15" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Store/templates/store/goods.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="49" lean-forward="true" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
+          <folding>
+            <element signature="e#190#225#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Freshshop/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="124" column="1" lean-forward="true" selection-start-line="124" selection-start-column="1" selection-end-line="124" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Store/templates/store/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="921">
+          <caret line="126" selection-start-line="126" selection-end-line="126" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Store/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="218" selection-start-line="218" selection-end-line="218" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Store/templates/store/good_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Store/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Store/templates/store/blank.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
         </state>
       </provider>
     </entry>

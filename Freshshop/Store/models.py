@@ -33,8 +33,8 @@ class Goods(models.Model):
     goods_name=models.CharField(max_length=32,verbose_name="商品名称")
     goods_price=models.FloatField(verbose_name="商品价格")
     goods_image=models.ImageField(upload_to="store/images",verbose_name="商品图片")
-    goods_number=models.IntegerField(verbose_name="商品名称")
-    goods_description= models.IntegerField(verbose_name="商品的描述")
+    goods_number=models.IntegerField(verbose_name="商品数量")
+    goods_description= models.TextField(verbose_name="商品的描述")
     goods_date = models.DateField(verbose_name="出厂日期")
     goods_safedate = models.IntegerField(verbose_name="保质期")
     store_id=models.ManyToManyField(to=Store,verbose_name="商品店铺")#与店铺是多对多关系

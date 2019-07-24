@@ -1,5 +1,8 @@
 {% extends 'store/blank.html' %}
           <!-- Page Heading -->
+{% block title %}
+    店铺管理
+{% endblock %}
     {% block blank %}
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
@@ -118,7 +121,6 @@
                 </div>
               </div>
             </div>
-
             <!-- Pie Chart -->
             <div class="col-xl-4 col-lg-5">
               <div class="card shadow mb-4">
@@ -263,7 +265,6 @@
                   <a target="_blank" rel="nofollow" href="https://undraw.co/">Browse Illustrations on unDraw &rarr;</a>
                 </div>
               </div>
-
               <!-- Approach -->
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
@@ -278,7 +279,7 @@
             </div>
           </div>
             {% endblock %}
- {% block style %}
+ {% block script %}
   <!-- Page level plugins -->
   <script src="/static/store/vendor/chart.js/Chart.min.js"></script>
   <!-- Page level custom scripts -->
