@@ -34,6 +34,13 @@
          <div class="form-group">
                     <input type="hidden" class="form-control form-control-user" name="store_id" placeholder="店铺id" id="user_id" value="1">
          </div>
+         <div class="form-group">
+                   <select class="form-control form-control-user" name="goods_type">
+                       {% for goods_type in goods_type_list %}
+                           <option value="{{ goods_type.id }}">{{ goods_type.type_name }}</option>
+                       {% endfor %}
+                   </select>
+         </div>
 
 
           <div class="form-group">

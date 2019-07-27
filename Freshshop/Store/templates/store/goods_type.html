@@ -1,0 +1,65 @@
+{% extends 'store/blank.html' %}
+{% block title %}
+    商品分类
+{% endblock %}
+{% block blank %}
+     <button class="btn btn-warning" data-toggle="modal" data-target="#myModal"><a >商品类型添加</a></button>
+
+    <table class="table table-bordered" >
+        <thead>
+            <tr>
+            <th>类型名称</th>
+            <th>类型描述</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for t in page %}
+
+                <tr>
+                    <td ><a href="/store/type/?id={{ t.id }}">{{ t.type_name }}</a></td>
+                    <td>{{ t.type_description }}</td>
+
+                    <td> <a class="btn btn-danger" href="/store/type_delete/?id={{ t.id }}">删除</a></td>
+
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="dataTables_paginate paging_simple_numbers">
+        <ul class="pagination">
+            {% for p in page_range %}
+            <li class="paginate_button page-item">
+                <a class="page-link" href="?keywords={{ keywords }}&page_num={{ p }}">{{ p }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="modal fade" id="myModal" tabindex="-1" rode="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">添加类型</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <form method="post" class="form" enctype="multipart/form-data" action="/store/type_add/">
+                    <div class="modal-body">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <input class="form-control form-control-user" placeholder="类型名称" type="text" name="type_name">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control form-control-user" placeholder="类型描述" type="text" name="type_description">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control form-control-user" placeholder="类型图片" type="file" name="picture">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">保存类型</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

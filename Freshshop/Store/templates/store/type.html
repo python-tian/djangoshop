@@ -1,0 +1,54 @@
+{% extends 'store/blank.html' %}
+{% block title %}
+    商品类型详情
+{% endblock %}
+{% block blank %}
+    <table class="table">
+        <tr>
+            <td rowspan="2"><img style="width: 200px;height: 200px;"  src="/static/{{ goods_type.picture }}"></td>
+            <th style="text-align: center">商品类型名称</th>
+            <td>{{ goods_type.type_name }}</td>
+        </tr>
+        <tr>
+                 <th  style="text-align: center">商品类型描述</th>
+                     <td>{{ goods_type.type_description|safe }}</td>
+        </tr>
+    </table>
+
+ <button class="btn btn-primary btn-block" data-toggle="modal" data-target="#myModal">
+ <a style="color:black ">修改</a>
+ </button>
+      <button type="submit" class="btn btn-primary btn-block"><a style="color:black " href="/store/type_allgood/{{ goods_type.id }}">所包含产品</a></button>
+ <div class="modal fade" id="myModal" tabindex="-1" rode="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">修改类型</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <form method="post" class="form" enctype="multipart/form-data" >
+                    <div class="modal-body">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <input class="form-control form-control-user" value="{{ goods_type.type_name }}" type="text" name="type_name">
+                             <input class="form-control form-control-user" value="{{ goods_type.id }}" type="hidden" name="id">
+
+
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control form-control-user" value="{{ goods_type.type_description }}" type="text" name="type_description">
+                        </div>
+                        <div class="form-group">
+                            <td rowspan="3"><img style="width: 200px;height: 200px;"  src="/static/{{ goods_type.picture }}">
+            <input type="file" name="picture" class="form-control form-control-user">
+            </td>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">修改类型</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

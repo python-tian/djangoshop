@@ -3,33 +3,46 @@
     商品展示
 {% endblock %}
 {% block blank %}
+
      <a class="btn btn-danger" href="/store/add_good/">商品添加</a>
-   <form method="post">
-   {% csrf_token %}
+
     <table class="table table-bordered" >
+
         <thead>
+        <tr style="text-align: center"><th colspan="6"><h3>{{ state_name }}</h3></th></tr>
+            <tr>
             <th>商品名称</th>
             <th>商品价格</th>
             <th>商品数量</th>
             <th>出厂日期/年/月/日</th>
             <th>保质期/天</th>
             <th>操作</th>
+        </tr>
         </thead>
         <tbody>
             {% for t in page %}
-
                 <tr>
-                    <td><a href="/store/goods/?id={{ t.id }}">{{ t.goods_name }}</a></td>
-                    <td><input type="text" value="{{ t.goods_price}}" id="gp" name="goods_price">
-                        <input type="hidden"  id="goods_id" name="goods_id" value="{{ t.id }}">
+                    <td ><a href="/store/goods/?id={{ t.id }}">{{ t.goods_name }}</a></td>
+                    <td><input type="text" value="{{ t.goods_price}}" id="gp{{ t.id }}" name="good_price" onblur="edit({{ t.id }})">
                     </td>
+                    <td hidden="hidden">   <input type="hidden" value="{{ t.id }}" id="gd" name="goods_id"></td>
                      <td>{{ t.goods_number }}</td>
                     <td>{{ t.goods_date|date:'Y-m-d'}}</td>
                     <td>{{ t.goods_safedate }}</td>
-                    <td><a class="btn btn-danger">下架</a>
-                         <a class="btn btn-primary">销毁</a>
+
+                    <td>
+                         {% ifequal state "up" %}
+                        <a class="btn btn-danger" href="/store/goods_set/down/?id={{ t.id }}">可以下架</a>
+                        {% else %}
+                        <a class="btn btn-danger" href="/store/goods_set/up/?id={{ t.id }}">可以上架</a>
+                         {% endifequal %}
+                        <a class="btn btn-primary" href="/store/goods_set/delete/?id={{ t.id }}">销毁</a>
+
+
+
 
                     </td>
+                <td hidden="hidden" ><span>{{ t.id }}</span></td>
                 </tr>
             {% endfor %}
         <span id="ts">{{ result.content }}</span>
@@ -42,9 +55,38 @@
                 <a class="page-link" href="?keywords={{ keywords }}&page_num={{ p }}">{{ p }}</a>
             </li>
             {% endfor %}
+
         </ul>
     </div>
-     </form>
+   <span id="ts">{{ result.cotent }}</span>
+
 {% endblock %}
 {% block script %}
+    <script>
+    {#$("#gp").blur(#}
+      function edit(t_id) {
+            console.log(t_id);
+            {#var id=$("#gd").val();#}
+            var goods_price=$("#gp"+t_id).val();
+            var url="/store/new/?id="+t_id+"&goods_price="+goods_price;
+            $.ajax({
+                url:url,
+                type:'get',
+                data:'',
+                success:function(data) {
+                    var content=data.content;
+                    $("#ts").text(content)
+                },
+                error:function(error) {
+                    console.log(error)
+
+                }
+            })
+        }
+    {#)#}
+</script>
+
+
+
+
 {% endblock %}
