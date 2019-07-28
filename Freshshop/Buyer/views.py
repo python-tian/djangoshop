@@ -1,5 +1,4 @@
 import random
-
 from Buyer.models import *
 from Store.models import *
 from django.shortcuts import render
@@ -222,5 +221,7 @@ def cut_delete(request,state):
             customer.save()
     return HttpResponseRedirect(referer)
 #购物车的功能
-
+def buyercar(request):
+    pass
+    return render(request,"buyer/buyercar.html",locals())
 # Create your views here.

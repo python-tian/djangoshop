@@ -9,7 +9,8 @@ urlpatterns = [
     path('goods/',goods),
     path('base1/',base1),
     path('user/',user),
-    re_path(r'cut_delete/(?P<state>\w+)',cut_delete)
+    re_path(r'cut_delete/(?P<state>\w+)',cut_delete),
+    path('buyercar/',buyercar)
 
 ]
 urlpatterns += [
