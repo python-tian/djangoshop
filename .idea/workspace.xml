@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="888cea24-a458-420b-8454-83b1d17ebc3f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Freshshop/Buyer/templates/buyer/buyercar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Freshshop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Freshshop/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Freshshop/Buyer/templates/buyer/goods.html" beforeDir="false" afterPath="$PROJECT_DIR$/Freshshop/Buyer/templates/buyer/goods.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Freshshop/Buyer/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Freshshop/Buyer/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Freshshop/Buyer/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Freshshop/Buyer/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Freshshop/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/Freshshop/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,12 +11,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Freshshop/Freshshop/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="169">
-              <caret line="18" column="15" lean-forward="true" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
+              <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
               <folding>
                 <element signature="e#633#665#0" expanded="true" />
               </folding>
@@ -32,8 +27,31 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Freshshop/Buyer/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+            <state relative-caret-position="270">
+              <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Freshshop/Buyer/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="28" lean-forward="true" selection-start-column="28" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Freshshop/Store/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -61,7 +79,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -84,24 +101,13 @@
               <item name="djangoshop" type="b2602c69:ProjectViewProjectNode" />
               <item name="djangoshop" type="462c0819:PsiDirectoryNode" />
               <item name="Freshshop" type="462c0819:PsiDirectoryNode" />
-              <item name="Freshshop" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="djangoshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="djangoshop" type="462c0819:PsiDirectoryNode" />
-              <item name="Freshshop" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="djangoshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="djangoshop" type="462c0819:PsiDirectoryNode" />
-              <item name="Freshshop" type="462c0819:PsiDirectoryNode" />
               <item name="Store" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -135,17 +141,26 @@
       <updated>1563847383429</updated>
       <workItem from="1563847385536" duration="37000" />
       <workItem from="1564285287354" duration="83000" />
+      <workItem from="1564296451208" duration="255000" />
     </task>
+    <task id="LOCAL-00001" summary="2019-07-28商城项目">
+      <created>1564296607186</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1564296607186</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120000" />
+    <option name="totallyTimeSpent" value="375000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21482602" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21785174" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -171,11 +186,31 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="2019-07-28商城项目" />
+    <option name="LAST_COMMIT_MESSAGE" value="2019-07-28商城项目" />
+  </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Freshshop/Store/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Freshshop/Buyer/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="28" lean-forward="true" selection-start-column="28" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Freshshop/Freshshop/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
-          <caret line="18" column="15" lean-forward="true" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
+          <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
           <folding>
             <element signature="e#633#665#0" expanded="true" />
           </folding>
@@ -184,8 +219,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Freshshop/Buyer/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+        <state relative-caret-position="270">
+          <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
