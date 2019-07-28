@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b11b5cb2-de75-438f-82bd-b7e1dfe8e622" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/166a326c-e3ef-4bf4-8ba5-818cba013ee1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/166a326c-e3ef-4bf4-8ba5-818cba013ee1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/39641deb-5dac-4d34-92ae-70933eb42a76.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/39641deb-5dac-4d34-92ae-70933eb42a76/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4f543b3f-bae1-4151-b523-d7e49f80b6e1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4f543b3f-bae1-4151-b523-d7e49f80b6e1/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5e989a52-e58e-48df-ac48-2abf285d7e09.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5e989a52-e58e-48df-ac48-2abf285d7e09.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8e87b64e-4665-4e70-8b68-eec05ed6b375.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8e87b64e-4665-4e70-8b68-eec05ed6b375/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ecd76abf-1d01-4f4c-9b2c-8c819838c97e.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ecd76abf-1d01-4f4c-9b2c-8c819838c97e/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +39,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Store/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
+            <state relative-caret-position="368">
               <caret line="75" selection-start-line="75" selection-end-line="75" />
             </state>
           </provider>
@@ -56,7 +48,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Store/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
+            <state relative-caret-position="11190">
               <caret line="377" column="9" selection-start-line="377" selection-start-column="9" selection-end-line="377" selection-end-column="9" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
@@ -152,7 +144,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="778" />
@@ -164,7 +156,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -199,6 +190,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -311,17 +303,20 @@
       <workItem from="1564192368108" duration="6580000" />
       <workItem from="1564199059856" duration="6649000" />
       <workItem from="1564215355357" duration="19036000" />
+      <workItem from="1564278761860" duration="3000" />
+      <workItem from="1564279029933" duration="200000" />
+      <workItem from="1564279488447" duration="9000" />
+      <workItem from="1564279519671" duration="367000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="214677000" />
+    <option name="totallyTimeSpent" value="215850000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22239032" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23600605" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -671,16 +666,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Store/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="377" column="9" selection-start-line="377" selection-start-column="9" selection-end-line="377" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Buyer/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1059">
@@ -693,8 +678,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Store/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
+        <state relative-caret-position="368">
           <caret line="75" selection-start-line="75" selection-end-line="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Store/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11190">
+          <caret line="377" column="9" selection-start-line="377" selection-start-column="9" selection-end-line="377" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
