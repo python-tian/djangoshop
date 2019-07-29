@@ -10,7 +10,7 @@
 		<span>></span>
 		<a href="#">商品详情</a>
 	</div>
-<form method="post">
+<form method="post" action="/buyer/place_order/">
 {% csrf_token %}
 
 	<div class="goods_detail_con clearfix">
@@ -18,19 +18,21 @@
 		<div class="goods_detail_list fr">
 			<h3>{{ goods.goods_name }}</h3>
 			<p>{{ goods.goods_description }}</p>
+
 			<div class="prize_bar">
-				<span class="show_pirze">¥<em>{{ goods.goods_price }}</em></span>
+				<span class="show_pirze" >¥<em id="price">{{ goods.goods_price }}</em></span>
 				<span class="show_unit">单  位：500g</span>
 			</div>
 			<div class="goods_num clearfix">
 				<div class="num_name fl">数 量：</div>
 				<div class="num_add fl">
-					<input type="text" class="num_show fl" value="1" name="number">
-					<a href="javascript:;" class="add fr">+</a>
-					<a href="javascript:;" class="minus fr">-</a>
+					<input id="count" type="text" class="num_show fl" value="1" name="count">
+                    <input type="hidden" class="num_show fl" value="{{ goods.id }}" name="goods_id">
+					<a href="javascript:;" onclick="changecount('add') " id="add" class="add fr">+</a>
+					<a href="javascript:;" onclick="changecount('minus')" id="minus" class="minus fr">-</a>
 				</div>
 			</div>
-			<div class="total">总价：<em>16.80元</em></div>
+			<div class="total" >总价：<em id="total">{{ goods.goods_price }}</em><em>元</em></div>
 			<div class="operate_btn">
 {#				<a href="/buyer/user/" class="buy_btn">立即购买</a>#}
                 <input value="立即购买" type="submit" class="buy_btn">
@@ -77,28 +79,27 @@
 
 {% endblock %}
 {% block script %}
-	<div class="add_jump"></div>
+    <script src="/static/buyer/js/jquery-1.12.4.min.js"></script>
+    <script>
+        function changecount(ty) {
+            var value=$("#count").val();
+              console.log(value);
+            if(ty=="add"){
+                $("#count").val(++value);
+            }else{
+                if(value<=1){
+                     $("#count").val(1)
+                }else{
+                     $("#count").val(--value);
+                }
+            }
+            var price=$("#price").text();
+            console.log(price);
+            var total_price=price*value;
+              console.log(total_price);
+            $("#total").text(total_price)
+        }
+    </script>
 
-	<script type="text/javascript" src="/static/buyer/js/jquery-1.12.2.js"></script>
-	<script type="text/javascript">
-		var $add_x = $('#add_cart').offset().top;
-		var $add_y = $('#add_cart').offset().left;
-
-		var $to_x = $('#show_count').offset().top;
-		var $to_y = $('#show_count').offset().left;
-
-		$(".add_jump").css({'left':$add_y+80,'top':$add_x+10,'display':'block'});
-		$('#add_cart').click(function(){
-			$(".add_jump").stop().animate({
-				'left': $to_y+7,
-				'top': $to_x+7},
-				"fast", function() {
-					$(".add_jump").fadeOut('fast',function(){
-						$('#show_count').html(2);
-					});
-
-			});
-		})
-	</script>
 {% endblock %}
 

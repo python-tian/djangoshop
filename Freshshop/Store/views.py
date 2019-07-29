@@ -3,6 +3,8 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect,JsonResponse
 from Store.models import *
 from django.core.paginator import Paginator
+from Buyer.models import *
+from datetime import datetime
 #设置一个函数，来判断用户存在
 def loginuser(username):
     user=Seller.objects.filter(username=username).first()
@@ -188,13 +190,8 @@ def add_good(request):
         goods.goods_price = goods_price
         goods. goods_safedate = goods_safedate
         goods.goods_type=Goodstype.objects.get(id=int(goods_type))
+        goods.store_id=Store.objects.get(id=int(store_id))#我们把商品和店铺变成了，多对一关系。
         goods.save()
-        #因为有多对多的关系，随意要多保存一次
-        goods.store_id.add(
-            Store.objects.get(id=int(store_id))
-        )
-        goods.save()
-
         return HttpResponseRedirect('/store/good_list/up')
     return render(request,'store/add_good.html',locals())
 #商品展示类表
@@ -375,4 +372,46 @@ def type_allgood(request,id):
         start = 0
     page_range = paginator.page_range[start:end]
     return render(request,'store/type_allgood.html',locals())
+#店铺当前未处理的订单
+def order_list(request):
+    store_id=request.COOKIES.get("has_store")
+    keywords = request.GET.get("keywords", "")
+    page_num = request.GET.get("page_num", 1)
+    if keywords:
+        order_list = OrderDetail.objects.filter(order_id__order_status=2,goods_store=store_id,goods_name__contains=keywords)
+    else:
+        order_list = OrderDetail.objects.filter(order_id__order_status=2, goods_store=store_id)
+    paginator = Paginator(order_list,6)
+    page = paginator.page(int(page_num))
+    start = int(page_num) - 3
+    end = int(page_num) + 2
+    if start <= 0:
+        start = 0
+    page_range = paginator.page_range[start:end]
+    now_time=datetime.now()
+    if request.method=='POST':
+        id=request.POST.get("order_id")
+        print(id)
+        order=OrderDetail.objects.filter(id=id).first().order_id
+        order.order_status=3
+        order.save()
+    return render(request,'store/order_list.html',locals())
+#店铺当已经发货的订单
+def order_work(request):
+    store_id = request.COOKIES.get("has_store")
+    keywords = request.GET.get("keywords", "")
+    page_num = request.GET.get("page_num", 1)
+    if keywords:
+        order_list = OrderDetail.objects.filter(order_id__order_status=3, goods_store=store_id,
+                                                goods_name__contains=keywords)
+    else:
+        order_list = OrderDetail.objects.filter(order_id__order_status__in=[3,4], goods_store=store_id)
+    paginator = Paginator(order_list, 6)
+    page = paginator.page(int(page_num))
+    start = int(page_num) - 3
+    end = int(page_num) + 2
+    if start <= 0:
+        start = 0
+    page_range = paginator.page_range[start:end]
+    return render(request, 'store/order_work.html', locals())
 # Create your views here.

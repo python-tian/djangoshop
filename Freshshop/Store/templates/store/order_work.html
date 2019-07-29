@@ -1,0 +1,181 @@
+{% extends 'store/blank.html' %}
+{% block title %}
+    商品以处理订单展示
+{% endblock %}
+{% block blank %}
+
+
+
+    <table class="table table-bordered" >
+
+        <thead>
+        <tr style="text-align: center"><th colspan="6"><h3>已处理订单</h3></th></tr>
+            <tr>
+            <th>订单编号</th>
+            <th>订单商品</th>
+            <th>订单金额</th>
+            <th>状态</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for order in page %}
+                <tr>
+                    <td id="order_id{{ order.id }}">{{ order.order_id.order_id }}</td>
+                     <td id="goods_name{{ order.id }}">{{ order.goods_name }}</td>
+                    <td id="goods_total{{ order.id }}">{{ order.goods_total}}</td>
+                     <td id="goods_image{{ order.id }}" hidden="hidden">{{ order.goods_image}}</td>
+                    <td style="color: red">已支付,以发货</td>
+                    <td hidden="hidden" id="user_name{{ order.id }}">{{order.order_id.order_address.recver }}</td>
+                     <td hidden="hidden" id="user_phone{{ order.id }}">{{ order.order_id.order_address.recv_phone }}</td>
+                       <td hidden="hidden" id="order_address{{ order.id }}">{{ order.order_id.order_address.address }}</td>
+                     {% ifequal order.order_id.order_status 4 %}
+                    <td hidden="hidden" id="id{{ order.id }}">买家已收货</td>
+                     {% else %}
+                          <td hidden="hidden" id="id{{ order.id }}">买家未收货</td>
+                    {% endifequal %}
+                    <td>
+
+                        <button class="btn " data-toggle="modal" data-target="#myModal">
+                            <a class="btn btn-danger" href="#" onclick="edit({{ order.id }})">订单发货详情</a>
+                                    </button>
+                           <button class="btn " data-toggle="modal" data-target="#myModalone">
+                          <a class="btn btn-danger" href="#" onclick="edit({{ order.id }})">查看（是否确认收货）</a>
+                                  </button>
+                    </td>
+                <td hidden="hidden" ><span>{{ order.id }}</span></td>
+                </tr>
+
+            {% endfor %}
+        <span id="ts">{{ result.content }}</span>
+        </tbody>
+    </table>
+    <div class="dataTables_paginate paging_simple_numbers">
+        <ul class="pagination">
+            {% for p in page_range %}
+            <li class="paginate_button page-item">
+                <a class="page-link" href="?keywords={{ keywords }}&page_num={{ p }}">{{ p }}</a>
+            </li>
+              {% endfor %}
+    <div class="modal fade" id="myModal" tabindex="-1" rode="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">发货信息</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <form method="post" class="form" enctype="multipart/form-data" >
+                    <div class="modal-body">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <input class="form-control form-control-user"  type="text" name="goods_name" id="name">
+
+
+
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control form-control-user"  type="text" name="goods_total" id="total">
+                        </div>
+                        <div class="form-group" >
+                            <td rowspan="3"><img style="width: 200px;height: 200px;float: left"  src="" id="image">
+                             <div class="form-group" style="margin-left: 200px;">
+                                 <ul style="line-height:30px;">
+                                     <li>收货人信息:
+                                         <ul>
+                                             <li >姓名：<span id="user_name"></span></li>
+                                              <li >联系方式：<span id="user_phone"></span></li>
+                                         </ul>
+                                     </li>
+                                     <li>收货地址：<br><span id="order_address"></span></li>
+                                     <li >订单号码:<br><span id="order_id"></span></li>
+                                     <li>发货时间:<br>
+                                     {{ now_time|date:"Y-m-d H:i:s" }}
+                                     </li>
+                                 </ul>
+                             </div>
+                            </td>
+
+
+                        </div>
+{##}
+{#                        <div class="form-group">#}
+{#                           <td>#}
+{#                                <input class="form-control form-control-user" placeholder="请输入选择的物流">#}
+{#                            </td>#}
+{#                        </div>#}
+                    </div>
+{#                    <div class="modal-footer">#}
+{#                        <input type="hidden" id="id"  name="order_id">#}
+{#                        <button type="submit" class="btn btn-primary">提交仓库</button>#}
+{#                    </div>#}
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+        </ul>
+    </div>
+ <div class="modal fade" id="myModalone" tabindex="-1" rode="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">状态信息</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <form method="post" class="form" enctype="multipart/form-data" >
+                    <div class="modal-body">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <input class="form-control form-control-user"  type="text" name="goods_name" id="id">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+        </ul>
+    </div>
+
+
+
+{% endblock %}
+{% block script %}
+     <script src="/static/buyer/js/jquery-1.12.4.min.js"></script>
+     <script>
+        function edit(id) {
+            var goods_name=$("#goods_name"+id).text();
+            var goods_total=$("#goods_total"+id).text();
+            var order_id=$("#order_id"+id).text();
+            var user_phone=$("#user_phone"+id).text();
+            var user_name=$("#user_name"+id).text();
+            var goods_image=$("#goods_image"+id).text();
+             var order_address=$("#order_address"+id).text();
+              var id=$("#id"+id).text();
+            var image="/static/"+goods_image;
+            if(id){
+                $("#name").val(goods_name);
+                $("#total").val(goods_total);
+                $("#order_id").text(order_id);
+                $("#user_phone").text(user_phone);
+                $("#user_name").text(user_name);
+                 $("#order_address").text(order_address);
+                   $("#id").val(id);
+                document.getElementById('image').src =image;{# 得到图片，通过js #}
+            }
+
+        }
+        {#function edit(t_id) {#}
+        {#       var id=$("#id"+t_id).text();#}
+        {#       if(id){#}
+        {#            $("#id").val(id);#}
+        {#       }#}
+        {##}
+        {#}#}
+    </script>
+{% endblock %}
+
+
+

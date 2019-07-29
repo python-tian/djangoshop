@@ -47,8 +47,7 @@ class Goods(models.Model):
     goods_safedate = models.IntegerField(verbose_name="保质期")
     goods_under=models.IntegerField(verbose_name="商品状态",default=1)#设置商品状态，0为下架，1为待售
     goods_type = models.ForeignKey(to=Goodstype, on_delete=models.CASCADE, verbose_name="商品类型id")  # 与商品类型是多对一的关系
-    store_id=models.ManyToManyField(to=Store,verbose_name="商品店铺")#与店铺是多对多关系
-
+    store_id=models.ForeignKey(to=Store,on_delete=models.CASCADE,verbose_name="商品店铺")#与店铺是多对多关系
 #商品图片
 class GoodImg(models.Model):
     img_address=models.ImageField(upload_to="store/images",verbose_name="图片地址")
@@ -56,20 +55,20 @@ class GoodImg(models.Model):
     good_id=models.ForeignKey(to=Goods,on_delete=models.CASCADE,
                               verbose_name="商品id")#与商品是多对一关系
 #增加一个用户订单表
-class Customer(models.Model):
-    buyer_id=models.ForeignKey(to='Buyer.Buyer',on_delete=models.CASCADE,verbose_name="买家id")
-    goods_id=models.ForeignKey(to='Goods',on_delete=models.CASCADE,  verbose_name="商品id")#与商品是多对一的关系
-    address_id=models.ForeignKey(to='Buyer.Address',on_delete=models.CASCADE,verbose_name="收货地址id",default=1)#与收货地址是多对多关系
-    date=models.DateTimeField(verbose_name="下单时间",default=timezone.now)
-    order_id=models.IntegerField(verbose_name="订单号码")
-    number=models.IntegerField(verbose_name="购买产品的数量")
-    money=models.IntegerField(verbose_name="花费的钱数")
-    order_status=models.IntegerField(verbose_name="订单的状态",default=1)#1代表订单在线0代表订单取消，但未删除
-    pay_status=models.IntegerField(verbose_name="支付状态",default=1)#1代表未支付0代表以支付
+# class Customer(models.Model):
+#     buyer_id=models.ForeignKey(to='Buyer.Buyer',on_delete=models.CASCADE,verbose_name="买家id")
+#     goods_id=models.ForeignKey(to='Goods',on_delete=models.CASCADE,  verbose_name="商品id")#与商品是多对一的关系
+#     address_id=models.ForeignKey(to='Buyer.Address',on_delete=models.CASCADE,verbose_name="收货地址id",default=1)#与收货地址是多对一关系
+#     date=models.DateTimeField(verbose_name="下单时间",default=timezone.now)
+#     order_id=models.IntegerField(verbose_name="订单号码")
+#     number=models.IntegerField(verbose_name="购买产品的数量")
+#     money=models.IntegerField(verbose_name="花费的钱数")
+#     order_status=models.IntegerField(verbose_name="订单的状态",default=1)#1代表订单在线0代表订单取消，但未删除
+#     pay_status=models.IntegerField(verbose_name="支付状态",default=1)#1代表未支付0代表以支付
 
-#增加一个购物车的表
-class Buycar(models.Model):
-    number=models.IntegerField(verbose_name="添加商品的数量")
-    goods_id=models.ManyToManyField(to='Goods',verbose_name="商品id")#与商品是多对多的关系
-    buyer_id=models.ForeignKey(to="Buyer.Buyer",on_delete=models.CASCADE,verbose_name="买家id")#与买家是多对一的关系
+# #增加一个购物车的表
+# class Buycar(models.Model):
+#     number=models.IntegerField(verbose_name="添加商品的数量",default=1)
+#     goods_id=models.ManyToManyField(to='Goods',verbose_name="商品id")#与商品是多对多的关系
+#     buyer_id=models.ForeignKey(to="Buyer.Buyer",on_delete=models.CASCADE,verbose_name="买家id")#与买家是多对一的关系
 # Create your models here.

@@ -1,10 +1,9 @@
-import random
+import random,time
 from Buyer.models import *
 from Store.models import *
 from django.shortcuts import render
 from Store.views import setpassword
 from django.http import HttpResponseRedirect,JsonResponse,HttpResponse
-
 from datetime import datetime
 from alipay import AliPay
 #设置一个函数。判断用户是否存在
@@ -101,6 +100,7 @@ def pay_order(request):
     money=request.GET.get("money")
     order_id=request.GET.get("order_id")
 
+
     alipay_public_key_string = """-----BEGIN PUBLIC KEY-----
     MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzR3vhY7kXDTszlXozA7dM1r5JIwl8CjO/VPegoXLYlFv4NacG9+sahDksPpjJkNnxG22saxuNGC8QzkYpIdKKgDVFernvFBWAEt9OXfiwK8yKVvd3eQ33nItXm4IOHGewHF2SLBNWtIa6uY4AahRcZIOa6vAVrw7egw1tJpTFgKAsdrZugrTYOpnQ3ar36hMkOEjTiasMfDKJwkfFt8YbkaoyEFCOw18qd4AMDvU4kx3AbMDw926ghlI4lIP8lt4UhLyzhcdlq8u5lavv5zE6gAC9PEdHtVitCwgTJdkwtnr/QBam77fOlMynvdjgHQkJh9BJumzDUCOR0JJ4lqo5wIDAQAB
     -----END PUBLIC KEY-----"""
@@ -125,103 +125,147 @@ def pay_order(request):
         return_url="http://127.0.0.1:8000/buyer/pay_result/",
         notify_url="http://127.0.0.1:8000/buyer/pay_result/",
     )
+    order = Order.objects.get(order_id=order_id)
+    order.order_status = 2
+    order.save()
     return HttpResponseRedirect("https://openapi.alipaydev.com/gateway.do?" + order_string)
 #商城页面展示单个产品的详情
 def goods(request):
     id=request.GET.get("id")
-    goods=Goods.objects.filter(id=id).first()
-    goods_price=goods.goods_price
-    goods_type=Goodstype.objects.filter(id=goods.goods_type_id).first()
-    user_id = request.COOKIES.get("user_id")  # 通过cookies找到对应的买家
-    buyer = Buyer.objects.filter(id=int(user_id)).first()  # 找到买家，只有买家存在才有订单
-    if buyer:
-        if request.method=='POST':
-            #开始商品对应的订单,先判断订单号是否存在，如果存在咋重新生成订单号
-            order_id = random.randint(100000, 500000)
-            customer = order(order_id)
-            number=request.POST.get("number")
-            if not customer:
-                customer=Customer()
-                customer.date=datetime.now()
-                customer.order_id=order_id
-                customer.number=number
-                customer.buyer_id_id=buyer.id
-                customer.money=goods_price*int(number)
-                customer.goods_id_id=id
-                customer.save()
-                return HttpResponseRedirect('/buyer/user/')
-    else:
-        return HttpResponseRedirect('/buyer/login/')  # 如果没有买家，返回到登录页面
-    return render(request,"buyer/goods.html",{"goods":goods,"goods_type":goods_type})
+    if id:
+        goods = Goods.objects.filter(id=id).first()
+        if goods:
+            goods_type = Goodstype.objects.filter(id=goods.goods_type_id).first()
+            return render(request,'buyer/goods.html',locals())
+    return HttpResponse("没有指定商品")
+#保存东西到订单中
+#设置一个函数来实现订单号
+def setorderid(user_id,goods_id,store_id):
+    order_time = time.strftime('%Y%m%d%H%M%S', time.localtime())
+    order_id=order_time+str(user_id)+str(goods_id)+str(store_id)
+    return order_id
+def place_order(request):
+    #从商品详情因为form表单action指向，post提交到了这个视图。
+    if request.method=='POST':
+        goods_id=request.POST.get("goods_id")
+        goods=Goods.objects.filter(id=goods_id).first()
+        user_id=request.COOKIES.get("user_id")
+        count=request.POST.get("count")
+        store_id=goods.store_id.id#商品与店铺多对一的关系,
+        price=goods.goods_price
+        order=Order()
+        order.order_id=setorderid(user_id,goods_id,store_id)
+        order.goods_count=int(count)
+        order.order_user=Buyer.objects.get(id=user_id)
+        order.order_price=int(count)*price
+        order.order_status=1#生成订单的时候，都是未支付状态
+        order.save()
+        #保存订单详情
+        order_detail=OrderDetail()
+        order_detail.order_id=order
+        order_detail.goods_id=goods_id
+        order_detail.goods_name=goods.goods_name
+        order_detail.goods_price=price
+        order_detail.goods_number=int(count)
+        order_detail.goods_store=store_id
+        order_detail.goods_total=int(count)*price
+        order_detail.goods_image=goods.goods_image
+
+        order_detail.save()
+        detail=[order_detail]
+    return render(request,'buyer/place_order.html',locals())
+# def goods(request):
+#     id=request.GET.get("id")
+#     goods=Goods.objects.filter(id=id).first()
+#     goods_price = goods.goods_price
+#     goods_type = Goodstype.objects.filter(id=goods.goods_type_id).first()
+#     user_id = request.COOKIES.get("user_id")  # 通过cookies找到对应的买家
+#     buyer = Buyer.objects.filter(id=int(user_id)).first()  # 找到买家，只有买家存在才有订单
+#     if buyer:
+#         if request.method=='POST':
+#             #开始商品对应的订单,先判断订单号是否存在，如果存在咋重新生成订单号
+#             order_id = random.randint(100000, 500000)
+#             customer = order(order_id)
+#             number=request.POST.get("number")
+#             if not customer:
+#                 customer=Customer()
+#                 customer.date=datetime.now()
+#                 customer.order_id=order_id
+#                 customer.number=number
+#                 customer.buyer_id_id=buyer.id
+#                 customer.money=goods_price*int(number)
+#                 customer.goods_id_id=id
+#                 customer.save()
+#                 return HttpResponseRedirect('/buyer/user/')
+#     else:
+#         return HttpResponseRedirect('/buyer/login/')  # 如果没有买家，返回到登录页面
+#     return render(request,"buyer/goods.html",{"goods":goods,"goods_type":goods_type})
 #单个商品详情中，立即购买的页面，用户中心
 #先做个base页面
 def base1(request):
     return render(request,'buyer/base1.html')
 #卖家订单详情
 #判断这个订单已经存在，不能重复
-def order(order_id):
-    customer=Customer.objects.filter(order_id=order_id).first()
-    return customer
-def user(request):
-    customer_list=Customer.objects.all().order_by("date").reverse()
-    result=[]
-    result1=[]
-    for t in customer_list:
-        if t.order_status:
-            good = []
-            num=t.number
-            goods=t.goods_id
-            for i in range(num):
-                good.append(goods)
-            lst={
-                "date":t.date,
-                "order_id":t.order_id,
-                "money":t.money,
-                "goods_list":good,
-                "customer_id":t.id,
-
-            }
-
-            result.append(lst)
-        else:
-            good = []
-            num = t.number
-            goods = t.goods_id
-            for i in range(num):
-                good.append(goods)
-            lst1 = {
-                "date": t.date,
-                "order_id": t.order_id,
-                "money": t.money,
-                "goods_list": good,
-                "customer_id": t.id,
-
-            }
-
-            result1.append(lst1)
-
-    return render(request,'buyer/user.html',locals())
-#删除订单
-def cut_delete(request,state):
-    if state=="cancel":
-        state_num=0
-    else:
-        state_num=1
-    id=request.GET.get("id")
-    referer = request.META.get("HTTP_REFERER")  # 返回当前请求的来源
-    if id:
-        customer=Customer.objects.filter(id=id).first()
-        if state=="delete":
-            customer.delete()
-        elif state=="restore":
-            customer.order_status = state_num
-            customer.save()
-        else:
-            customer.order_status=state_num
-            customer.save()
-    return HttpResponseRedirect(referer)
-#购物车的功能
-def buyercar(request):
-    pass
-    return render(request,"buyer/buyercar.html",locals())
+# def order(order_id):
+#     customer=Customer.objects.filter(order_id=order_id).first()
+#     return customer
+# def user(request):
+#     customer_list=Customer.objects.all().order_by("date").reverse()
+#     result=[]
+#     result1=[]
+#     for t in customer_list:
+#         if t.order_status:
+#             good = []
+#             num=t.number
+#             goods=t.goods_id
+#             for i in range(num):
+#                 good.append(goods)
+#             lst={
+#                 "date":t.date,
+#                 "order_id":t.order_id,
+#                 "money":t.money,
+#                 "goods_list":good,
+#                 "customer_id":t.id,
+#
+#             }
+#
+#             result.append(lst)
+#         else:
+#             good = []
+#             num = t.number
+#             goods = t.goods_id
+#             for i in range(num):
+#                 good.append(goods)
+#             lst1 = {
+#                 "date": t.date,
+#                 "order_id": t.order_id,
+#                 "money": t.money,
+#                 "goods_list": good,
+#                 "customer_id": t.id,
+#             }
+#             result1.append(lst1)
+#     return render(request,'buyer/user.html',locals())
+# #删除订单
+# def cut_delete(request,state):
+#     if state=="cancel":
+#         state_num=0
+#     else:
+#         state_num=1
+#     id=request.GET.get("id")
+#     referer = request.META.get("HTTP_REFERER")  # 返回当前请求的来源
+#     if id:
+#         customer=Customer.objects.filter(id=id).first()
+#         if state=="delete":
+#             customer.delete()
+#         elif state=="restore":
+#             customer.order_status = state_num
+#             customer.save()
+#         else:
+#             customer.order_status=state_num
+#             customer.save()
+#     return HttpResponseRedirect(referer)
+# #购物车的功能
+# def buyercar(request):
+#     pass
+#     return render(request,"buyer/buyercar.html",locals())
 # Create your views here.

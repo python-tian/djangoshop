@@ -8,9 +8,10 @@ urlpatterns = [
     path('pay_result/',pay_result),
     path('goods/',goods),
     path('base1/',base1),
-    path('user/',user),
-    re_path(r'cut_delete/(?P<state>\w+)',cut_delete),
-    path('buyercar/',buyercar)
+    path('place_order/',place_order)
+    #path('user/',user),
+    #re_path(r'cut_delete/(?P<state>\w+)',cut_delete),
+    #path('buyercar/',buyercar)
 
 ]
 urlpatterns += [

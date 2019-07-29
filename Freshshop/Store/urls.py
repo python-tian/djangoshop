@@ -19,5 +19,7 @@ urlpatterns = [
     path('type_delete/',type_delete),
     path('type_add/',type_add),
     path('type/',type),
-    re_path(r'type_allgood/(?P<id>\d+)',type_allgood)
+    re_path(r'type_allgood/(?P<id>\d+)',type_allgood),
+    path('order_list/',order_list),
+    path('order_work/',order_work)
 ]
